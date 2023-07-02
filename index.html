@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Tip Calculator</title>
+</head>
+
+<body>
+    <div class="out-container">
+        <header class="split">
+            <p>S P L I</p>
+            <p>T T E R</p></header>
+        <div class="container">
+            <div class="side-left">
+                <div>
+                    <p class="right-titles">Bill</p>
+                    <input class="stylef" type="number" name="billvalue" id="billValue" value="0">
+                </div>
+                <div id="selectTips">
+                    <p class="right-titles">Select Tip %</p>
+                    <button class="customp | preperc" id="percentage5" value="5" onclick="callPerc(this.id)">5%</button>
+                    <button class="customp | preperc" id="percentage10" value="10" onclick="callPerc(this.id)">10%</button>
+                    <button class="customp | preperc" id="percentage15" value="15" onclick="callPerc(this.id)">15%</button>
+                    <button class="customp | preperc" id="percentage20" value="20" onclick="callPerc(this.id)">20%</button>
+                    <button class="customp | preperc" id="percentage50" value="50" onclick="callPerc(this.id)">50%</button>
+                    <input class="stylef | customp" type="number" name="cpercent" id="cPercentage" placeholder="Custom" onchange="callPerc(this.id,this.value)">
+                </div>
+                <div>
+                    <p class="right-titles">Number of People</p>
+                    <input class="stylef" type="number" name="people" id="people" value="0" onchange="calcTips()">
+                </div>
+            </div>
+            <div class="side-right">
+                <div class="section-right">
+                    <div class="section-in-left">
+                        <p>Tip Amount</p>
+                        <p><span>/person</span></p>
+                    </div>
+                    <div id="tip">$ 00.00</div>
+                </div>
+                <div class="section-right">
+                    <div class="section-in-left">
+                        <p>Total</p>
+                        <p><span>/person</span></p>
+                    </div>
+                    <div id="totalAmount">$ 00.00</div>
+                </div>
+                <div class="btn">
+                    <button class="resetbtn" id="reset" onclick="resetCalc()">Reset</button>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="credits">
+        <div class="attribution">
+            Challenge by <a href="https://www.frontendmentor.io/challenges/tip-calculator-app-ugJNGbJUX" target="_blank">Frontend Mentor</a>.
+            Coded by <a href="https://github.com/aleafernandes">Alexandre Fernandes</a>.
+        </div>
+    </div>
+
+
+</body>
+<script src="script.js"></script>
+</html>
